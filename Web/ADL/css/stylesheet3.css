@@ -1,0 +1,98 @@
+header {
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    margin: 5px;
+    text-align: center;
+    animation: flowAnimation 10s infinite linear;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Lora;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    align-items: center;
+    background-color: blanchedalmond;
+    border: 6px solid #5b350d;
+    box-shadow: 4px 4px 8px;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    width: auto;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+}
+
+footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 1em;
+    text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+select{
+    height: 30px;
+    font-family: Lora;
+}
+
+button {
+    background-color: #5b350d;
+    color: #fff;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    overflow: hidden;
+    font-family: Lora;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 4px solid #64330a;
+    z-index: 1000;
+    box-shadow: 4px 4px 8px;
+  }
+
+@keyframes flowAnimation {
+    0% {
+      background-color: #5b350d;
+    }
+    25% {
+      background-color: #754410;
+    }
+    50% {
+      background-color: #824a0f; 
+    }
+    75% {
+      background-color: #8a4d0b; 
+    }
+    100% {
+      background-color: #6e3c06;
+    }
+}

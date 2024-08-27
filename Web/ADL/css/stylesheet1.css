@@ -1,0 +1,160 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Lora;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    margin: 5px;
+    text-align: center;
+    animation: flowAnimation 10s infinite linear;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.links{
+    margin-left: 35%;
+    display: flex;
+    flex-direction: row;
+}
+
+.link{
+    margin-right: 10%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.link:hover{
+    color: beige;
+    transform: scale(1.10);
+}
+
+footer {
+    background-color: #333333;
+    color: #fff;
+    padding: 1em;
+    text-align: left;
+}
+
+section {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.product {
+    background-color: blanchedalmond;
+    border: 4px solid #5b350d;
+    margin: 1em;
+    padding: 1em;
+    text-align: center;
+    height: auto;
+    max-width: 250px;
+    box-shadow: 2px 2px 4px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.product:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 8px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #5b350d;
+    color: #fff;
+    font-family: Lora;
+    padding: 0.5em 1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.frontier{
+    background-image: url('D:\\College\\ADL\\Images\\frontier1.jpg');
+    background-size: contain;
+    background-blend-mode: exclusion;
+    height: 550px;
+    width: 1400px;
+    animation: colorChange 8s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 8px;
+    border-radius: 25px;
+}
+.frontier_upper
+{
+    background-color: rgba(0, 0, 0, 0.492);
+    color: #ffffff;
+    height: 550px;
+    width: 1400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:xx-large;
+    transition: opacity 1s;
+    border-radius: 25px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@keyframes colorChange {
+    0% {
+         background-image: url('D:\\College\\ADL\\Images\\frontier1.jpg');
+    }
+    33% {
+        background-image: url('D:\\College\\ADL\\Images\\frontier2.jpg');
+    }
+    66% {
+        background-image: url('D:\\College\\ADL\\Images\\frontier3.jpg');
+    }
+    100% {
+        background-image: url('D:\\College\\ADL\\Images\\frontier4.jpg');
+    }
+}
+
+@keyframes flowAnimation {
+    0% {
+      background-color: #5b350d;
+    }
+    25% {
+      background-color: #7b4912;
+    }
+    50% {
+      background-color: #824a0f; 
+    }
+    75% {
+      background-color: #8a4d0b; 
+    }
+    100% {
+      background-color: #6e3c06;
+    }
+}

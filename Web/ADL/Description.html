@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Description</title>
+    <link rel="stylesheet" href="css\stylesheet2.css">
+</head>
+<body>
+
+    <header>
+        <h1><em><a href="Home.html">Kovai Furniture Store</a></em></h1>
+        <div class="links">
+            <a class="link" href="LivingRoom.html">Living Room</a>
+            <a class="link" href="BedRoom.html">Bedroom</a>
+            <a class="link" href="DiningRoom.html">Dining Room</a>
+        </div>
+    </header><br>
+
+    <div class="product-container">
+        
+        <h1>Elegant Grey Sofa Set</h1>
+
+        <div class="media-container">
+            <img id="productImage" src="Images\bluesofa1.jpg" alt="Modern Sofa">
+            <img id="productImage1" src="Images\bluesofa2.jpg" style="display: none;" alt="Modern Sofa">
+            <video id="productVideo" style="display: none;" controls autoplay muted>
+                <source src="Images\sofavideo.mp4" type="video/mp4">
+            </video>
+        </div><br>
+
+        <div class="button-container">
+            <button class="buy-button" style="margin-right: 15px;" onclick="changeImageToVideoReverse()">👈</button>
+            <button class="buy-button" onclick="changeImageToVideo()">👉</button>
+        </div>
+        
+        <p>High-quality sofa for your living room</p>
+
+        <div class="points">
+            <ol>
+                <li>Made of steel base for strength</li>
+                <li>Soft and spongy cotton used for maximum comfort</li>
+                <li>Foldable design for portability</li>
+            </ol>
+        </div>
+
+        <p><em>Price: ₹24,999</em></p>
+        <a href="Order.html">
+            <button class="buy-button">Buy Now</button>
+        </a>
+       
+    </div><br>
+
+    <script>
+        var isImage = 0;
+
+        function changeImageToVideo() 
+        {
+            var productImage = document.getElementById("productImage");
+            var productVideo = document.getElementById("productVideo");
+
+            if (isImage === 0) 
+            {
+                productImage.style.display = "none";
+                productImage1.style.display = "block";
+                productVideo.style.display = "none";
+            } 
+            else if(isImage === 1)
+            {
+                productImage.style.display = "none";
+                productImage1.style.display = "none";
+                productVideo.style.display = "block";
+            }
+            else
+            {
+                productImage.style.display = "block";
+                productImage1.style.display = "none";
+                productVideo.style.display = "none";
+            }
+            isImage = (isImage+1)%3;
+        }
+
+        function changeImageToVideoReverse() 
+        {
+            var productImage = document.getElementById("productImage");
+            var productVideo = document.getElementById("productVideo");
+
+            if (isImage === 0) 
+            {
+                productImage.style.display = "none";
+                productImage1.style.display = "none";
+                productVideo.style.display = "block";
+                isImage = 2;
+            } 
+            else if(isImage === 1)
+            {
+                productImage.style.display = "block";
+                productImage1.style.display = "none";
+                productVideo.style.display = "none";
+                isImage = 0;
+            }
+            else
+            {
+                productImage.style.display = "none";
+                productImage1.style.display = "block";
+                productVideo.style.display = "none";
+                isImage = 1;
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Furniture Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>
